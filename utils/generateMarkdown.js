@@ -11,28 +11,28 @@ function renderLicenseLink(license) {}
 function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}
+function generateMarkdown(userResponses) {
+  return `# ${userResponses.title}
 
 ## Overview
 
-${data.overview}
+${userResponses.overview}
 
 ### learning points
 
-${data.title}
+${userResponses.title}
 
 ## User Story
 
-${data.userStories}
+${userResponses.userStories}
 
 ## Acceptance Criteria
 
-${data.acceptanceCriteria}
+${userResponses.acceptanceCriteria}
 
 ## Technologies
 
-${data.technologies}
+${userResponses.technologies}
 - **Server Side APIs**
 - **Fetch**
 - **JavaScript**
@@ -45,13 +45,13 @@ ${data.technologies}
 
 ## License
 
-${data.license}
+${userResponses.license}
 
 ## Links
 
 ### live Link
 
-${data.liveLink}
+${userResponses.liveLink}
 `;
 }
 

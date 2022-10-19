@@ -1,9 +1,7 @@
 // Include packages needed for this application
 const inquirerFunction = require('inquirer');
-const fileSystem = require('fs');
-const filePath = require('path');
+const fileSystem = require('fs'); 
 const markdown = require('./utils/generateMarkdown');
-const fileName = 'GeneratedREADME.md';
 
 // Array of questions for user input
 const questions = [
@@ -50,8 +48,8 @@ const questions = [
 ];
 
 // Creates a function to write a README file
-function writeToFile(fileName, data) {
-	fileSystem.writeFile(filePath.join(__dirname, "hi.txt"),"hello", (error) => {
+function writeToFile(fileName, createdMarkDown) {
+	fileSystem.writeFile(fileName, createdMarkDown, (error) => {
 		if (error) throw error;
 		console.log('File created');
 	});
@@ -60,11 +58,11 @@ function writeToFile(fileName, data) {
 // Initialize app
 function init() {
 	// // try 2 just adding the array of objects also with a for each
-	inquirerFunction.prompt(questions).then((responses) => {
-		console.log(responses);
+	inquirerFunction.prompt(questions).then((userResponses) => {
+		const createdMarkDown = markdown(userResponses);
+		writeToFile("readREADME.md", createdMarkDown);
 	});
 }
 
 // Function call to initialize app
-// init();
-writeToFile()
+init();

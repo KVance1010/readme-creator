@@ -55,34 +55,7 @@ App with 5 day forecast
 
 ### Dynamically creating the weather cards for a five day forecast
 
-```JavaScript
-for (let i = 1; i < 6; i++, j += 8) {
-		let card = document.createElement('div');
-		card.setAttribute('class', 'card');
-		let date = document.createElement('div');
-		date.textContent = moment().add(i, 'days').format('L');
-		let weatherIcon = document.createElement('img');
-		weatherIcon.setAttribute('src', 'https://openweathermap.org/img/wn/' + cityData.list[j].weather[0].icon + '@2x.png');
-		weatherIcon.setAttribute('alt', 'weatherIcon');
-		let temp = document.createElement('div');
-		temp.textContent =
-			'Temp: ' +
-			cityData.list[j].main.temp +
-			' ' +
-			String.fromCharCode(176) +
-			'F';
-		let wind = document.createElement('div');
-		wind.textContent = 'Wind: ' + cityData.list[j].wind.speed + ' MPH';
-		let humidity = document.createElement('div');
-		humidity.textContent = 'Humidity: ' + cityData.list[j].main.humidity;
-
-		card.appendChild(date);
-		card.appendChild(weatherIcon);
-		card.appendChild(temp);
-		card.appendChild(wind);
-		card.appendChild(humidity);
-		cards.appendChild(card);
-	}
+```
 ```
 
 ## License
@@ -93,7 +66,7 @@ Please refer to the LICENSE in the repo.
 
 ### live Link
 
-[Live website] https://kvance1010.github.io/weather-app/
+[Live website] 
 
 ### LinkedIn
 
