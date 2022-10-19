@@ -1,57 +1,61 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) {
+
+}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
 
+}
+ 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(userResponses) {
   return `# ${userResponses.title}
 
-## Overview
+## Description
 
-${userResponses.overview}
+${userResponses.description}
 
-### learning points
+### Table of Contents
 
-${userResponses.title}
+- Installation
+- Usage
+- License
+- Contributing
+- Tests
+- Questions
 
-## User Story
+## Installation
 
-${userResponses.userStories}
+${userResponses.installation}
 
-## Acceptance Criteria
+## Usage
 
-${userResponses.acceptanceCriteria}
-
-## Technologies
-
-${userResponses.technologies}
-- **Server Side APIs**
-- **Fetch**
-- **JavaScript**
-- **HTML**
-- **CSS**
-
-## Screenshot/mockup
-
-## CodeSnippets
+${userResponses.usage}
 
 ## License
 
 ${userResponses.license}
 
-## Links
+## Contributing
 
-### live Link
+${userResponses.contributors}
 
-${userResponses.liveLink}
+## Tests
+
+${userResponses.tests}
+
+## Questions
+
+${userResponses.questions}
 `;
 }
 

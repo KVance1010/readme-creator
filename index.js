@@ -11,40 +11,36 @@ const questions = [
 		type: 'input',
 	},
 	{
-		name: 'overview',
-		message: 'Give an overview of the project?',
+		name: 'description',
+		message: 'Give an overview of what your project does?',
 		type: 'input',
 	},
 	{
-		name: 'learningObjectives',
-		message: 'Learning Objectives of the project?',
+		name: 'installation',
+		message: 'How and what is required for the projects installation?',
 		type: 'input',
 	},
 	{
-		name: 'technologies',
-		message: 'What Technologies were used?',
+		name: 'usage',
+		message: 'How should the project be used?',
 		type: 'input',
 	},
 	{
-		name: 'userStories',
-		message: 'What were the user stories?',
+		name: 'contribution',
+		message: 'Please list the contributors separated with spaces.',
 		type: 'input',
 	},
 	{
-		name: 'acceptanceCriteria',
-		message: 'What were the acceptance criteria?',
+		name: 'test',
+		message: 'what are the test instructions?',
 		type: 'input',
 	},
 	{
 		name: 'license',
-		message: 'What license was used?',
-		type: 'input',
-	},
-	{
-		name: 'liveLink',
-		message: 'Link to live source?',
-		type: 'input',
-	},
+		message: 'please select a license from the list of licenses',
+		type: 'list',
+		choices: ["MIT", "IBM", "Mozilla", "ISC", "Eclipse", "Apache", "Boost"]
+	}
 ];
 
 // Creates a function to write a README file

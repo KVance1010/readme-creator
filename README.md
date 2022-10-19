@@ -1,13 +1,13 @@
-# Weather Dashboard: Server-Side APIs
+# Readme generator
 
 ## Overview
 
-Weather application that shows the current weather and a five day forecast for the chosen city.
+
 
 ### learning points
 
-- leverage a third-party API to collect server-side data and use it to displays information to the website
-- Create elements dynamically using JavaScript 
+- 
+-  
 
 
 ## User Story
@@ -40,11 +40,10 @@ THEN I am taken to the corresponding section of the README
 
 ## Technologies
 
-- **Server Side APIs**
-- **Fetch**
-- **JavaScript**
-- **HTML**
-- **CSS**
+- **JavaScripts**
+- **Node.js**
+- **Inquirer.js**
+- **NPM**
 
 ## Screenshot/mockup
 
