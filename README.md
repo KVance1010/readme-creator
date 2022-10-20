@@ -3,7 +3,6 @@
 ## Overview
 
 
-
 ### learning points
 
 - 
@@ -47,12 +46,11 @@ THEN I am taken to the corresponding section of the README
 
 ## Screenshot/mockup
 
-![Schedule at the start of the day](./assets/images/weather-app.jpg)
-App with 5 day forecast
+![Schedule at the start of the day]()
 
 ## CodeSnippets
 
-### Dynamically creating the weather cards for a five day forecast
+### 
 
 ```
 ```
@@ -61,12 +59,8 @@ App with 5 day forecast
 
 Please refer to the LICENSE in the repo.
 
-## Links
+## Links - Contact Information
 
-### live Link
+[live link]()
 
-[Live website] 
-
-### LinkedIn
-
-[LinkedIn] https://www.linkedin.com/in/kyle-s-vance
+[LinkedIn](https://www.linkedin.com/in/kyle-s-vance)

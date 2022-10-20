@@ -1,24 +1,70 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {
-
+// creates a license section of readREADME
+function renderLicenseSection(license, name) {
+	if (license) {
+		return "The license used on this project was "+ name ;
+	}
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {
-
+// license Badge and Link
+function renderLinkAndBadge(license) {
+	let badge;
+	switch (license) {
+		case 'MIT license':
+			badge = [
+				'![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)',
+				'https://opensource.org/licenses/MIT',
+			];
+			break;
+		case 'IBM license':
+			badge = [
+				'![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)',
+				'https://opensource.org/licenses/IPL-1.0',
+			];
+			break;
+		case 'Mozilla license':
+			badge = [
+				'![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)',
+				'https://opensource.org/licenses/MPL-2.0',
+			];
+			break;
+		case 'ISC license':
+			badge = [
+				'![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)',
+				'https://opensource.org/licenses/ISC',
+			];
+			break;
+		case 'Eclipse license':
+			badge = [
+				'![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)',
+				'https://opensource.org/licenses/EPL-1.0',
+			];
+			break;
+		case 'Apache license':
+			badge = [
+				'![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)',
+				'https://opensource.org/licenses/Apache-2.0',
+			];
+			break;
+		case 'Boost license':
+			badge = [
+				'![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)',
+				'https://www.boost.org/LICENSE_1_0.txt',
+			];
+			break;
+		default:
+			badge = ['',''];
+			break;
+	}
+	return badge;
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {
-
-}
- 
-// TODO: Create a function to generate markdown for README
+// Generate markdown for README
 function generateMarkdown(userResponses) {
-  return `# ${userResponses.title}
+	const license = renderLinkAndBadge(userResponses.license);
+	const licenseSection = renderLicenseSection(license, userResponses.license);
+	return `# ${userResponses.title}
+  
+${license[0]}
 
 ## Description
 
@@ -26,36 +72,49 @@ ${userResponses.description}
 
 ### Table of Contents
 
-- Installation
-- Usage
-- License
-- Contributing
-- Tests
-- Questions
+* [Installation](#installation)
+* [Usage](#usage)
+* [License]{#license)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
+
 
 ## Installation
 
 ${userResponses.installation}
 
+
 ## Usage
 
 ${userResponses.usage}
 
+
 ## License
 
-${userResponses.license}
+${licenseSection}
+
+[license link]${license[1]}
+
 
 ## Contributing
 
-${userResponses.contributors}
+${userResponses.contribution}
+
 
 ## Tests
 
-${userResponses.tests}
+${userResponses.test}
+
 
 ## Questions
 
-${userResponses.questions}
+If you have any questions regarding this project, please reach me by email at ${userResponses.question2}
+
+or by github at
+
+[GitHub]: https://github.com/${userResponses.question1} 
+
 `;
 }
 
