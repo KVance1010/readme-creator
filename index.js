@@ -43,7 +43,7 @@ const questions = [
 	},
 	{
 		name: 'contribution',
-		message: 'Please list the contributors separated with commas:',
+		message: 'Please list the contributors:(separated with commas and do not include the "and" for the last person)',
 		type: 'input',
 	},
 	{
@@ -61,6 +61,11 @@ const questions = [
 		message: 'What is your email address?',
 		type: 'input',
 	},
+	{
+		name: 'question3',
+		message: 'What is your LinkedIn profile name?',
+		type: 'input',
+	}
 ];
 
 // Creates a function to write a README file

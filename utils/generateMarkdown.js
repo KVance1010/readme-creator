@@ -62,6 +62,7 @@ function renderLinkAndBadge(license) {
 function generateMarkdown(userResponses) {
 	const license = renderLinkAndBadge(userResponses.license);
 	const licenseSection = renderLicenseSection(license, userResponses.license);
+	const contributors = userResponses.contribution.split(', ');
 	return `# ${userResponses.title}
   
 ${license[0]}
@@ -74,7 +75,7 @@ ${userResponses.description}
 
 * [Installation](#installation)
 * [Usage](#usage)
-* [License]{#license)
+* [License](#license)
 * [Contributing](#contributing)
 * [Tests](#tests)
 * [Questions](#questions)
@@ -94,27 +95,24 @@ ${userResponses.usage}
 
 ${licenseSection}
 
-[license link]${license[1]}
+[license link](${license[1]})
 
 
 ## Contributing
 
-${userResponses.contribution}
-
+${contributors.join('\n\n')}
 
 ## Tests
 
 ${userResponses.test}
 
-
 ## Questions
 
 If you have any questions regarding this project, please reach me by email at ${userResponses.question2}
 
-or by github at
+[GitHub](https://github.com/${userResponses.question1}) 
 
-[GitHub]: https://github.com/${userResponses.question1} 
-
+[LinkedIn](https://www.linkedin.com/in/${userResponses.question3}/)
 `;
 }
 
