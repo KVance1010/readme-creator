@@ -76,7 +76,7 @@ ${userResponses.description}
 * [Installation](#installation)
 * [Usage](#usage)
 * [License](#license)
-* [Contributing](#contributing)
+* [Contributors](#contributors)
 * [Tests](#tests)
 * [Questions](#questions)
 
@@ -98,7 +98,7 @@ ${licenseSection}
 [license link](${license[1]})
 
 
-## Contributing
+## Contributors
 
 ${contributors.join('\n\n')}
 

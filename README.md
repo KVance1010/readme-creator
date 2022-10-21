@@ -2,12 +2,13 @@
 
 ## Overview
 
+When creating projects on GitHub it is important to have a high-quality README file, so that you can displays the hard work you put into your project. This program helps a user create a high-quality README file by asking a series of questions and generating the README file for the user.
 
 ### learning points
 
-- 
--  
-
+- new javascript libraries
+- working with node
+- understanding CLI
 
 ## User Story
 
@@ -46,13 +47,34 @@ THEN I am taken to the corresponding section of the README
 
 ## Screenshot/mockup
 
-![Schedule at the start of the day]()
+![created README file](./images/readme.jpg)
 
 ## CodeSnippets
 
-### 
+### A Cut-down version of the license-link/badge svg
 
-```
+``` javascript
+function renderLinkAndBadge(license) {
+	let badge;
+	switch (license) {
+		case 'MIT license':
+			badge = [
+				'![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)',
+				'https://opensource.org/licenses/MIT',
+			];
+			break;
+		case 'IBM license':
+			badge = [
+				'![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)',
+				'https://opensource.org/licenses/IPL-1.0',
+			];
+			break;
+		default:
+			badge = ['', ''];
+			break;
+	}
+	return badge;
+}
 ```
 
 ## License
@@ -61,6 +83,6 @@ Please refer to the LICENSE in the repo.
 
 ## Links - Contact Information
 
-[live link]()
+[Video Link](https://drive.google.com/file/d/1QiN2lY7BYbvbIuu7etDqEN6nydtGjj-G/view)
 
 [LinkedIn](https://www.linkedin.com/in/kyle-s-vance)
